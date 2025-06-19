@@ -33,7 +33,7 @@
 			]]
 		]]
 	]],
-	["output", "...\r\n"],
+	["empty-continuation", "..."],
 	["command", [
 		["prompt", ">>> "],
 		["python-code", [

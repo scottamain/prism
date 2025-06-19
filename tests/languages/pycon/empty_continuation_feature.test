@@ -1,0 +1,84 @@
+>>> number = -42
+
+>>> if number < 0:
+...     print("negative")
+... elif number > 0:
+...     print("positive")
+... else:
+...     print("equal to 0")
+...
+negative
+
+----------------------------------------------------
+
+[
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			"number ",
+			["operator", "="],
+			["operator", "-"],
+			["number", "42"]
+		]]
+	]],
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			["keyword", "if"],
+			" number ",
+			["operator", "<"],
+			["number", "0"],
+			["punctuation", ":"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "print"],
+			["punctuation", "("],
+			["string", "\"negative\""],
+			["punctuation", ")"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "elif"],
+			" number ",
+			["operator", ">"],
+			["number", "0"],
+			["punctuation", ":"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "print"],
+			["punctuation", "("],
+			["string", "\"positive\""],
+			["punctuation", ")"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "else"],
+			["punctuation", ":"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "print"],
+			["punctuation", "("],
+			["string", "\"equal to 0\""],
+			["punctuation", ")"]
+		]]
+	]],
+	["empty-continuation", "..."],
+	["output", "negative"]
+]
+
+----------------------------------------------------
+
+Checks for empty continuation lines that start with "..." but have no code after them.

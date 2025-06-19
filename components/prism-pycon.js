@@ -13,6 +13,10 @@ Prism.languages.pycon = {
 			}
 		}
 	},
+	'empty-continuation': {
+		pattern: /^\.\.\.$/m,
+		alias: 'punctuation'
+	},
 	'output': /.(?:.*(?:[\r\n]|.$))*/
 };
 
