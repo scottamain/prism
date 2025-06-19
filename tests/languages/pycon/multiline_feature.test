@@ -1,0 +1,51 @@
+>>> def greet(name):
+...     return f"Hello, {name}!"
+...
+>>> greet("Alice")
+'Hello, Alice!'
+
+----------------------------------------------------
+
+[
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			["keyword", "def"],
+			["function", "greet"],
+			["punctuation", "("],
+			"name",
+			["punctuation", ")"],
+			["punctuation", ":"]
+		]]
+	]],
+	["command", [
+		["prompt", "... "],
+		["python-code", [
+			["keyword", "return"],
+			["string-interpolation", [
+				["string", "f\"Hello, "],
+				["interpolation", [
+					["punctuation", "{"],
+					"name",
+					["punctuation", "}"]
+				]],
+				["string", "!\""]
+			]]
+		]]
+	]],
+	["output", "...\r\n"],
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			"greet",
+			["punctuation", "("],
+			["string", "\"Alice\""],
+			["punctuation", ")"]
+		]]
+	]],
+	["output", "'Hello, Alice!'"]
+]
+
+----------------------------------------------------
+
+Checks for multi-line function definitions with continuation prompts and proper Python syntax highlighting.

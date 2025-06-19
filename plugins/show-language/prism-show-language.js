@@ -211,6 +211,8 @@
 		"pbfasm": "PureBasic",
 		"purs": "PureScript",
 		"py": "Python",
+		"pycon": "Python console",
+		"python-repl": "Python console",
 		"qsharp": "Q#",
 		"qs": "Q#",
 		"q": "Q (kdb+ database)",

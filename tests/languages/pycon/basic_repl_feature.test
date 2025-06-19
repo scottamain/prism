@@ -1,0 +1,37 @@
+>>> print("Hello, World!")
+Hello, World!
+>>> x = 42
+>>> x
+42
+
+----------------------------------------------------
+
+[
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			["keyword", "print"],
+			["punctuation", "("],
+			["string", "\"Hello, World!\""],
+			["punctuation", ")"]
+		]]
+	]],
+	["output", "Hello, World!\r\n"],
+	["command", [
+		["prompt", ">>> "],
+		["python-code", [
+			"x ",
+			["operator", "="],
+			["number", "42"]
+		]]
+	]],
+	["command", [
+		["prompt", ">>> "],
+		["python-code", ["x"]]
+	]],
+	["output", "42"]
+]
+
+----------------------------------------------------
+
+Checks for basic REPL input prompts, Python code highlighting within prompts, and output lines.

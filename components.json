@@ -1168,6 +1168,12 @@
 			"alias": "py",
 			"owner": "multipetros"
 		},
+		"pycon": {
+			"title": "Python console",
+			"require": "python",
+			"alias": "python-repl",
+			"owner": "RunDevelopment"
+		},
 		"qsharp": {
 			"title": "Q#",
 			"require": "clike",

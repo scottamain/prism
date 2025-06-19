@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Python Console</title>
+	<link rel="stylesheet" href="../themes/prism.css">
+	<style>
+		.token.prompt {
+			color: #999;
+			font-weight: bold;
+		}
+		.token.output {
+			color: #666;
+			font-style: italic;
+		}
+	</style>
+</head>
+<body>
+	<h1>Python Console</h1>
+	<h2>Basic example</h2>
+	<pre><code class="language-pycon">>>> print("Hello, World!")
+Hello, World!
+>>> x = 42
+>>> x
+42</code></pre>
+
+	<h2>Multi-line statements</h2>
+	<pre><code class="language-pycon">>>> def greet(name):
+...     return f"Hello, {name}!"
+...
+>>> greet("Alice")
+'Hello, Alice!'</code></pre>
+
+	<h2>Complex example with imports and function definitions</h2>
+	<pre><code class="language-pycon">>>> import re
+>>> import struct
+>>> _charescape = re.compile(r'(?<!\\)\\(?:x([0-9a-fA-F]{2})|u([0-9a-fA-F]{4}))')
+>>> def _replace_struct(match):
+...     match = match.groups()
+...     # Convert XX or XXXX hex string into 2 bytes
+...     codepoint = (match[0] and '00' + match[0] or match[1]).decode('hex')
+...     # Convert 2 bytes into a signed integer, insert into escape sequence
+...     return '\\u%i?' % struct.unpack('!h', codepoint)
+...
+>>> example = "CJK Ideograph: \u8123"
+>>> escaped = example.encode('unicode_escape')
+>>> escaped
+'CJK Ideograph: \\u8123'
+>>> _charescape.sub(_replace_struct, escaped)
+'CJK Ideograph: \\u-32477?'</code></pre>
+
+	<h2>Error handling</h2>
+	<pre><code class="language-pycon">>>> 1 / 0
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+ZeroDivisionError: division by zero
+>>> try:
+...     result = 10 / 0
+... except ZeroDivisionError as e:
+...     print(f"Error: {e}")
+...
+Error: division by zero</code></pre>
+
+	<h2>List comprehensions and loops</h2>
+	<pre><code class="language-pycon">>>> numbers = [1, 2, 3, 4, 5]
+>>> squares = [x**2 for x in numbers]
+>>> squares
+[1, 4, 9, 16, 25]
+>>> for i, square in enumerate(squares):
+...     print(f"{i}: {square}")
+...
+0: 1
+1: 4
+2: 9
+3: 16
+4: 25</code></pre>
+
+	<script src="../components/prism-core.js"></script>
+	<script src="../components/prism-python.js"></script>
+	<script src="../components/prism-pycon.js"></script>
+</body>
+</html>
